@@ -1,0 +1,192 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans");
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+  position: relative;
+  padding: 0;
+  margin: 0;
+  z-index: 1; }
+
+.page {
+  padding: 2% 2% 6% 2%;
+  font-family: 'Open Sans', sans-serif; }
+  .page .section__title {
+    font-size: 48px;
+    text-align: center;
+    color: #0693c0;
+    margin-bottom: 48px;
+    padding: 8px; }
+    .page .section__title.section--2 {
+      margin-top: 96px; }
+  .page .grid {
+    font-size: 0;
+    width: 65%;
+    margin: 24px auto; }
+    .page .grid .col {
+      width: 32%;
+      height: 19.968vw;
+      margin-right: 2%;
+      margin-bottom: 2%;
+      display: inline-block;
+      background: #0693c0;
+      overflow: hidden; }
+      .page .grid .col .borders {
+        height: 100%;
+        width: 100%;
+        z-index: 5; }
+        .page .grid .col .borders .border {
+          position: absolute;
+          background: white;
+          opacity: 0; }
+          .page .grid .col .borders .border.border--v {
+            top: 50%;
+            width: 2px;
+            height: 0;
+            transition: opacity 250ms ease-out, height 250ms ease-out, top 250ms ease-out; }
+            .page .grid .col .borders .border.border--v.border--right {
+              right: 5%; }
+            .page .grid .col .borders .border.border--v.border--left {
+              left: 5%; }
+          .page .grid .col .borders .border.border--h {
+            left: 50%;
+            width: 0;
+            height: 2px;
+            transition: opacity 250ms ease-out, width 250ms ease-out, left 250ms ease-out; }
+            .page .grid .col .borders .border.border--h.border--bottom {
+              bottom: 5%; }
+            .page .grid .col .borders .border.border--h.border--top {
+              top: 5%; }
+      .page .grid .col .info {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        top: 50%;
+        transform: translateY(-50%);
+        text-align: center;
+        opacity: 0;
+        transition: opacity 250ms;
+        color: white;
+        z-index: 2;
+        padding: 16px; }
+        .page .grid .col .info .name {
+          font-size: 1.5rem; }
+        .page .grid .col .info .blurb {
+          font-style: italic;
+          margin-top: 8px;
+          font-size: 1rem; }
+      .page .grid .col.ivy {
+        background: url(../img/ivy.jpg) no-repeat top center;
+        background-size: cover; }
+      .page .grid .col.ariel {
+        background: url(../img/ariel.jpg) no-repeat center center;
+        background-size: cover; }
+      .page .grid .col.sarah {
+        background: url(../img/sarah.jpg) no-repeat center center;
+        background-size: cover; }
+      .page .grid .col.john {
+        background: url(../img/john.jpg) no-repeat center center;
+        background-size: cover; }
+      .page .grid .col.tier {
+        background: url(../img/tier.jpg) no-repeat center center;
+        background-size: cover; }
+      .page .grid .col.retreat {
+        background: url(../img/retreat.jpg) no-repeat center center;
+        background-size: cover; }
+      .page .grid .col.friendship {
+        background: url(../img/friendship.jpg) no-repeat center center;
+        background-size: cover; }
+      .page .grid .col:nth-child(3n) {
+        margin-right: 0; }
+      .page .grid .col::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: #000;
+        opacity: 0;
+        transition: opacity 400ms; }
+      .page .grid .col:hover .borders .border {
+        opacity: 1; }
+        .page .grid .col:hover .borders .border.border--v {
+          top: 5%;
+          height: 90%; }
+        .page .grid .col:hover .borders .border.border--h {
+          left: 5%;
+          width: 90%; }
+      .page .grid .col:hover .info {
+        opacity: 1; }
+      .page .grid .col:hover::after {
+        content: "";
+        opacity: 0.5; }
+      @media (max-width: 1300px) {
+        .page .grid .col {
+          width: 49%;
+          height: 30.576vw; }
+          .page .grid .col:nth-child(3n) {
+            margin-right: 2%; }
+          .page .grid .col:nth-child(2n) {
+            margin-right: 0; } }
+      @media (max-width: 840px) {
+        .page .grid .col {
+          width: 100%;
+          height: 62.4vw; }
+          .page .grid .col:nth-child(2n) {
+            margin-right: 2%; } }
+  .page .irc {
+    width: 65%;
+    margin: 24px auto; }
+    .page .irc .info {
+      position: absolute;
+      top: 50%;
+      width: 100%;
+      transform: translateY(-50%);
+      color: white;
+      opacity: 0;
+      z-index: 2;
+      font-size: 36px;
+      text-align: center;
+      padding: 16px; }
+      @media (max-width: 840px) {
+        .page .irc .info {
+          font-size: 24px; } }
+    .page .irc .box {
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      right: 0px;
+      bottom: 0px;
+      border: 2px solid white;
+      transition: all 400ms;
+      z-index: 3; }
+    .page .irc img {
+      width: 100%; }
+    .page .irc::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: #000;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      transition: opacity 400ms; }
+    .page .irc:hover .info {
+      opacity: 1; }
+    .page .irc:hover .box {
+      top: 24px;
+      left: 24px;
+      right: 24px;
+      bottom: 24px;
+      opacity: 1; }
+    .page .irc:hover::after {
+      opacity: 0.8; }
+    @media (max-width: 1300px) {
+      .page .irc {
+        width: 80%; } }
+    @media (max-width: 840px) {
+      .page .irc {
+        width: 90%; } }
