@@ -88,6 +88,9 @@
       .page .grid .col.john {
         background: url(../img/john.jpg) no-repeat center center;
         background-size: cover; }
+      .page .grid .col.peter {
+        background: url(../img/peter.jpg) no-repeat center center;
+        background-size: cover; }
       .page .grid .col.tier {
         background: url(../img/tier.jpg) no-repeat center center;
         background-size: cover; }
