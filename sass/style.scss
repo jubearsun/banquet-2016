@@ -11,7 +11,7 @@
 }
 
 .page {
-  padding: 2% 2% 6% 2%;
+  padding: 2% 2% 10% 2%;
   font-family: 'Open Sans', sans-serif;
 
   .section__title {
@@ -365,6 +365,33 @@
 
     @media (max-width: 840px) {
       width: 90%;
+    }
+  }
+
+  a.resources {
+    text-decoration: none;
+    color: #ff69b4;
+    font-size: 1.5em;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+
+    &::after {
+      position: absolute;
+      top: 105%;
+      left: 50%;
+      content: "";
+      height: 2px;
+      width: 0;
+      background: #ff69b4;
+      transition: all 250ms linear;
+    }
+
+    &:hover {
+      &::after {
+        left: 0;
+        width: 100%;
+      }
     }
   }
 }

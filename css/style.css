@@ -9,7 +9,7 @@
   z-index: 1; }
 
 .page {
-  padding: 2% 2% 6% 2%;
+  padding: 2% 2% 10% 2%;
   font-family: 'Open Sans', sans-serif; }
   .page .section__title {
     font-size: 48px;
@@ -246,3 +246,22 @@
     @media (max-width: 840px) {
       .page .irc {
         width: 90%; } }
+  .page a.resources {
+    text-decoration: none;
+    color: #ff69b4;
+    font-size: 1.5em;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%); }
+    .page a.resources::after {
+      position: absolute;
+      top: 105%;
+      left: 50%;
+      content: "";
+      height: 2px;
+      width: 0;
+      background: #ff69b4;
+      transition: all 250ms linear; }
+    .page a.resources:hover::after {
+      left: 0;
+      width: 100%; }
