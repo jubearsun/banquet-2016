@@ -76,6 +76,56 @@
           font-style: italic;
           margin-top: 8px;
           font-size: 1rem; }
+      .page .grid .col a {
+        width: 100%;
+        height: 100%;
+        display: inline-block;
+        z-index: 4; }
+        .page .grid .col a .borders {
+          height: 100%;
+          width: 100%;
+          z-index: 5; }
+          .page .grid .col a .borders .border {
+            position: absolute;
+            background: white;
+            opacity: 0; }
+            .page .grid .col a .borders .border.border--v {
+              top: 50%;
+              width: 2px;
+              height: 0;
+              transition: opacity 250ms ease-out, height 250ms ease-out, top 250ms ease-out; }
+              .page .grid .col a .borders .border.border--v.border--right {
+                right: 5%; }
+              .page .grid .col a .borders .border.border--v.border--left {
+                left: 5%; }
+            .page .grid .col a .borders .border.border--h {
+              left: 50%;
+              width: 0;
+              height: 2px;
+              transition: opacity 250ms ease-out, width 250ms ease-out, left 250ms ease-out; }
+              .page .grid .col a .borders .border.border--h.border--bottom {
+                bottom: 5%; }
+              .page .grid .col a .borders .border.border--h.border--top {
+                top: 5%; }
+        .page .grid .col a .info {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          top: 50%;
+          transform: translateY(-50%);
+          text-align: center;
+          opacity: 0;
+          transition: opacity 250ms;
+          color: white;
+          z-index: 2;
+          padding: 16px; }
+          .page .grid .col a .info .name {
+            font-size: 1.5rem; }
+          .page .grid .col a .info .blurb {
+            font-style: italic;
+            margin-top: 8px;
+            font-size: 1rem; }
       .page .grid .col.ivy {
         background: url(../img/ivy.jpg) no-repeat top center;
         background-size: cover; }
@@ -90,6 +140,9 @@
         background-size: cover; }
       .page .grid .col.peter {
         background: url(../img/peter.jpg) no-repeat center center;
+        background-size: cover; }
+      .page .grid .col.cat {
+        background: url(../img/cat.jpg) no-repeat center center;
         background-size: cover; }
       .page .grid .col.tier {
         background: url(../img/tier.jpg) no-repeat center center;
