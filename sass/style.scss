@@ -11,7 +11,7 @@
 }
 
 .page {
-  padding: 2% 2% 10% 2%;
+  padding: 2% 2% 140px 2%;
   font-family: 'Open Sans', sans-serif;
 
   .section__title {
@@ -23,6 +23,10 @@
 
     &.section--2 {
       margin-top: 96px;
+    }
+
+    @media (max-width: 500px) {
+      font-size: 36px;
     }
   }
 
@@ -242,7 +246,7 @@
         transition: opacity 400ms;
       }
 
-      &:hover {
+      &:hover, &:focus {
         .borders {
           .border {
             opacity: 1;
@@ -341,7 +345,7 @@
       transition: opacity 400ms;
     }
 
-    &:hover {
+    &:hover, &:focus {
       .info {
         opacity: 1;
       }
@@ -387,7 +391,7 @@
       transition: all 250ms linear;
     }
 
-    &:hover {
+    &:hover, &:focus {
       &::after {
         left: 0;
         width: 100%;

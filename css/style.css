@@ -9,7 +9,7 @@
   z-index: 1; }
 
 .page {
-  padding: 2% 2% 10% 2%;
+  padding: 2% 2% 140px 2%;
   font-family: 'Open Sans', sans-serif; }
   .page .section__title {
     font-size: 48px;
@@ -19,6 +19,9 @@
     padding: 8px; }
     .page .section__title.section--2 {
       margin-top: 96px; }
+    @media (max-width: 500px) {
+      .page .section__title {
+        font-size: 36px; } }
   .page .grid {
     font-size: 0;
     width: 65%;
@@ -165,17 +168,17 @@
         background: #000;
         opacity: 0;
         transition: opacity 400ms; }
-      .page .grid .col:hover .borders .border {
+      .page .grid .col:hover .borders .border, .page .grid .col:focus .borders .border {
         opacity: 1; }
-        .page .grid .col:hover .borders .border.border--v {
+        .page .grid .col:hover .borders .border.border--v, .page .grid .col:focus .borders .border.border--v {
           top: 5%;
           height: 90%; }
-        .page .grid .col:hover .borders .border.border--h {
+        .page .grid .col:hover .borders .border.border--h, .page .grid .col:focus .borders .border.border--h {
           left: 5%;
           width: 90%; }
-      .page .grid .col:hover .info {
+      .page .grid .col:hover .info, .page .grid .col:focus .info {
         opacity: 1; }
-      .page .grid .col:hover::after {
+      .page .grid .col:hover::after, .page .grid .col:focus::after {
         content: "";
         opacity: 0.5; }
       @media (max-width: 1300px) {
@@ -230,15 +233,15 @@
       height: 100%;
       opacity: 0;
       transition: opacity 400ms; }
-    .page .irc:hover .info {
+    .page .irc:hover .info, .page .irc:focus .info {
       opacity: 1; }
-    .page .irc:hover .box {
+    .page .irc:hover .box, .page .irc:focus .box {
       top: 24px;
       left: 24px;
       right: 24px;
       bottom: 24px;
       opacity: 1; }
-    .page .irc:hover::after {
+    .page .irc:hover::after, .page .irc:focus::after {
       opacity: 0.8; }
     @media (max-width: 1300px) {
       .page .irc {
@@ -262,6 +265,6 @@
       width: 0;
       background: #ff69b4;
       transition: all 250ms linear; }
-    .page a.resources:hover::after {
+    .page a.resources:hover::after, .page a.resources:focus::after {
       left: 0;
       width: 100%; }
